@@ -1,9 +1,6 @@
 .header-wrapper {
   display: flex;
   justify-content: space-between;
-  background-color: #0000008c;
-  padding: 0px 15px;
-  margin: 6em 0px;
   border-radius: 10px;
   color: white;
 }

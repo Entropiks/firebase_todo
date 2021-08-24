@@ -1,13 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './UserInput.css';
 
 function UserInput() {
   return (
-    <div>
+    <div className="input-wrapper">
       <div className="input-toggle">
-
+        <div className="checkmark"></div>
       </div>
       <div className="input-field">
-        <input placeholder="Enter an item.."></input>
+        <form>
+          <input type="text" placeholder="Enter an item.." autofocus></input>
+        </form>
       </div>
     </div>
   )

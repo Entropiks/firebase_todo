@@ -2,7 +2,7 @@
 /* Button 1 */
 #button-1 .knobs:before
 {
-    content: 'YES';
+    content: 'LTE';
     position: absolute;
     top: 4px;
     left: 4px;
@@ -21,7 +21,7 @@
 
 #button-1 .checkbox:checked + .knobs:before
 {
-    content: 'NO';
+    content: 'DRK';
     left: 42px;
     background-color: #f44336;
 }
