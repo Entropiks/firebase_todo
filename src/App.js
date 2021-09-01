@@ -2,6 +2,7 @@ import background from './assets/bg_banner.png';
 import Header from './Components/Header';
 import './App.css';
 import UserInput from './Components/UserInput';
+import UserItem from './Components/UserItem';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <div className="content-wrapper">
         <Header />
         <UserInput />
-        {/* User List */}
+        <UserItem />
       </div>
       
     </div>

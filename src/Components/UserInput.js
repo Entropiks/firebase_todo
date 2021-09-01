@@ -4,11 +4,20 @@ import './UserInput.css';
 function UserInput() {
 
   // new state variable for when a user inputs something
-  const [item, setUserItem] = useState("");
+  const [items, setItems] = useState([]);
+  const [item, setItem] = useState('');
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
-    console.log(`item: ${item}`);
+
+    const newItem = {
+      id: new Date().getTime(),
+      text: item,
+      completed: false
+    }
+
+    setItems([...items].concat(newItem))
+    setItem("")
   }
 
   return (
@@ -17,16 +26,18 @@ function UserInput() {
         <div className="checkmark"></div>
       </div>
       <div className="input-field">
+        {/* handleSubmit runs when button with type submit is clicked */}
         <form onSubmit={handleSubmit}>
-          <input 
-            value={item}
+          <input
             type="text" 
             placeholder="Enter an item.."
-            onChange={e => setUserItem(e.target.value)}
+            onChange={(e) => setItem(e.target.value)} value={item}
             />
           <input type="submit" value="Submit"/>
         </form>
       </div>
+      {/* move this to another component? */}
+      {items.map((item) => <div key={item.id}>{item.text}</div>)}
     </div>
   )
 }
