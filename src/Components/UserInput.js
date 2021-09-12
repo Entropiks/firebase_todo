@@ -4,11 +4,17 @@ import './UserInput.css';
 function UserInput() {
 
   // new state variable for when a user inputs something
-  const [items, setItems] = useState([]);
   const [item, setItem] = useState('');
-
+  const [items, setItems] = useState([]);
+  
   function handleSubmit(e) {
     e.preventDefault();
+
+    // If nothing entered, alert the user, returning null stops it from being added to items state
+    if (!item) {
+      alert("please enter something");
+      return null;
+    }
 
     const newItem = {
       id: new Date().getTime(),
@@ -16,6 +22,7 @@ function UserInput() {
       completed: false
     }
 
+    // concat joins the items together with the new entered item - adds to setItem
     setItems([...items].concat(newItem))
     setItem("")
   }
@@ -32,12 +39,13 @@ function UserInput() {
             type="text" 
             placeholder="Enter an item.."
             onChange={(e) => setItem(e.target.value)} value={item}
+            className="userInputField"
             />
-          <input type="submit" value="Submit"/>
+          <button type="submit" value="Submit" className="button-submit">Submit</button>
         </form>
       </div>
-      {/* move this to another component? */}
-      {items.map((item) => <div key={item.id}>{item.text}</div>)}
+      {/* we want to pass item instead */}
+      {/* {items.map((item) => <UserItem items={items} key={item.id}/>)} */}
     </div>
   )
 }

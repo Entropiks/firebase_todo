@@ -1,5 +1,6 @@
 .input-wrapper {
   display: flex;
+  justify-content: space-between;
   height: 70px;
   background-color: #0000008c;
   border-radius: 10px;
@@ -27,15 +28,17 @@
 
 .input-field input {
   color: white;
-  width: 100%;
   box-sizing: border-box;
   background-color: transparent;
   border: none;
   outline: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .input-field form {
   height: 100%;
+  justify-content: space-between;
   flex-grow: 1;
   display: flex;
 }
@@ -44,4 +47,14 @@
   padding: 0px 20px;
   display: flex;
   align-items: center;
+}
+
+.button-submit {
+  width: 100px;
+  color: white;
+  background-color: #00000033;
+  border: none;
+  margin: 15px;
+  border-radius: 5px;
+  border: 1px solid #ffffff38;
 }

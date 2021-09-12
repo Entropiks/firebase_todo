@@ -19,6 +19,7 @@
 }
 
 .content-wrapper {
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   padding-top: 100px;
 }

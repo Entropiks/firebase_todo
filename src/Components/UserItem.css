@@ -1,11 +1,17 @@
-.userlist-wrapper {
-  background-color: #0000008c;
+.useritem-wrapper {
   border-radius: 10px;
   color: #dcdcdc8c;
-  width: 700px;
   height: 75px;
-  margin: 15px 0px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
 }
 
+.button-wrapper {
+
+}
+
+li {
+  list-style-type: none;
+}
