@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import UserItem from './UserItem';
 import './UserInput.css';
 
 function UserInput() {
@@ -6,6 +7,8 @@ function UserInput() {
   // new state variable for when a user inputs something
   const [item, setItem] = useState('');
   const [items, setItems] = useState([]);
+
+  console.log({item, items});
   
   function handleSubmit(e) {
     e.preventDefault();
@@ -45,7 +48,7 @@ function UserInput() {
         </form>
       </div>
       {/* we want to pass item instead */}
-      {/* {items.map((item) => <UserItem items={items} key={item.id}/>)} */}
+      {items.map((item) => <UserItem items={items} key={item.id}/>)}
     </div>
   )
 }
