@@ -1,9 +1,7 @@
 import background from './assets/bg_banner.png';
 import Header from './Components/Header';
 import './App.css';
-import UserInput from './Components/UserInput';
 import UserList from './Components/UserList';
-import AddItem from './Components/AddItem';
 
 
 function App() {
@@ -13,8 +11,7 @@ function App() {
       <img className="background-image" src={background}/>
       <div className="content-wrapper">
         <Header />
-        <UserInput />
-        {/* <UserList /> */}
+        <UserList />
       </div>
     </div>
   );
