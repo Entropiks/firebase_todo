@@ -6,3 +6,8 @@
 .list-wrapper {
   padding: 0px;
 }
+
+.list-wrapper ul {
+  padding: 0px;
+  margin: 0px;
+}

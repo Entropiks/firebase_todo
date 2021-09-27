@@ -1,10 +1,10 @@
 import React from 'react'
 import './UserItem.css'
 
-function UserItem({ inputText }) {
+function UserItem({text}) {
   return (
     <div className="useritem-wrapper">
-      <li className="user-item">{inputText}</li>
+      <li className="user-item">{text}</li>
       <div className="button-wrapper">
         <button>CHECK</button>
         <button>DELETE</button>

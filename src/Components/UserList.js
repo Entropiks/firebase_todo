@@ -13,8 +13,15 @@ function UserList() {
         inputText={inputText}
         setInputText={setInputText}
         userList={userList}
-        setUserList={setUserList} />
-      <UserItem />
+        setUserList={setUserList} 
+      />
+      <div className="list-wrapper">
+        <ul className="ul-wrapper">
+         {userList.map(item => (
+           <UserItem text={item.text} key={item.id}/>
+         ))}
+        </ul>
+      </div>
     </div>
   )
 }
