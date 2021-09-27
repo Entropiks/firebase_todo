@@ -5,12 +5,16 @@ import UserInput from './UserInput'
 function UserList() {
 
   const [inputText, setInputText] = useState("");
+  const [userList, setUserList] = useState([]);
 
   return (
     <div>
-      <UserInput setInputText={setInputText}/>
+      <UserInput 
+        inputText={inputText}
+        setInputText={setInputText}
+        userList={userList}
+        setUserList={setUserList} />
       <UserItem />
-      <p>{inputText}</p>
     </div>
   )
 }
