@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .app-wrapper {
   position: absolute;
   width: 100%;

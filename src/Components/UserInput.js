@@ -8,16 +8,23 @@ function UserInput({ inputText, setInputText, userList, setUserList }) {
     setInputText(e.target.value);
   }
 
+  // prevent default, if inputtext does not exist, alert else set the userlist with the available userlist and props
   const submitHandler = function(e) {
     e.preventDefault();
-    setUserList([ ...userList, {text: inputText, completed: false, id: Math.random() * 1000 }]);
-    setInputText();
+    if (!inputText) {
+      alert('please enter something');
+    } else {
+      setUserList([ ...userList, {text: inputText, completed: false, id: Math.random() * 1000 }]);
+      // set InputText state to blank and also reset the form to clear the visual value
+      setInputText('');
+      document.getElementById('form-input').reset();
+    }
   }
 
   return (
     <div className="input-wrapper">
       <div className="input-field"> 
-        <form>
+        <form id="form-input">
           <input className="input-field" placeholder="Enter something here.." type="text" onChange={inputTextHandler}/>
           <button onClick={submitHandler} className="button-submit">Submit</button>
         </form>

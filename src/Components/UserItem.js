@@ -3,11 +3,13 @@ import './UserItem.css'
 
 function UserItem({text}) {
   return (
-    <div className="useritem-wrapper">
-      <li className="user-item">{text}</li>
-      <div className="button-wrapper">
-        <button>CHECK</button>
-        <button>DELETE</button>
+    <div>
+      <div className="useritem-wrapper"> 
+        <div className="wrapper">
+          <div className="checkmark" />
+          <li className="user-item"><p>{text}</p></li>
+        </div>
+        <button className="button-submit">Delete</button>
       </div>
     </div>
   )
