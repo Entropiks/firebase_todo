@@ -1,0 +1,12 @@
+.noticebar-wrapper {
+  display: flex;
+  width: 700px;
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px 10px 0px 0px;
+  color: white;
+  height: 75px;
+  background-color: #0000008c;
+  align-items: center;
+  justify-content: center;
+}

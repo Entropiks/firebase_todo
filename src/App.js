@@ -2,6 +2,7 @@ import background from './assets/bg_banner.png';
 import Header from './Components/Header';
 import './App.css';
 import UserList from './Components/UserList';
+import NoticeBar from './Components/NoticeBar';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div className="content-wrapper">
         <Header />
         <UserList />
+        <NoticeBar />
       </div>
     </div>
   );
