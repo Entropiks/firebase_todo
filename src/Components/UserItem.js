@@ -22,10 +22,13 @@ function UserItem({text, userList, setUserList, item }) {
 
   return (
     <div>
-      <div className="useritem-wrapper"> 
+      <div className={`useritem-wrapper ${item.completed ? "completed" : ''} `}> 
         <div className="wrapper">
-          <div onClick={completedHandler} className="checkmark active" />
-          <li className="user-item"><p>{text}</p></li>
+          <div onClick={completedHandler} className="checkmark" >
+          <li className="user-item">
+            <p>{text}</p>
+          </li>
+          </div>
         </div>
         <button onClick={deleteHandler} className="button-submit">Delete</button>
       </div>

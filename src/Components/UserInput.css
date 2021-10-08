@@ -9,6 +9,7 @@
 
 
 .checkmark {
+  display: flex;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -16,6 +17,10 @@
   border: 1px solid #373737;
   cursor: pointer;
   transition: all 0.25s;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
 }
 .checkmark:hover {
   background: linear-gradient(30deg, rgba(53,124,142,1) 0%, rgba(136,106,195,1) 100%);

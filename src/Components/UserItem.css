@@ -10,6 +10,11 @@
   margin: 10px 0px;
 }
 
+.useritem-wrapper:hover {
+  background-color: #000000af;
+  transition: 0.3s;
+}
+
 .wrapper {
     flex-grow: 1;
     display: flex;
@@ -23,7 +28,7 @@ ul {
 li {
   list-style-type: none;
   line-height: 25px;
-  padding-left: 15px;
+  padding-left: 40px;
 }
 
 
@@ -34,12 +39,17 @@ li {
   background-color: #00000042;
   border: 1px solid #373737;
   cursor: pointer;
-  transition: all 0.25s;
+  /* opacity: 0;
+  transition: 0.3s; */
 }
 .checkmark:hover {
+  background: linear-gradient(30deg, rgba(53,124,142,.5) 0%, rgba(136,106,195,.5) 50%);
+}
+
+.completed {
   background: linear-gradient(30deg, rgba(53,124,142,1) 0%, rgba(136,106,195,1) 100%);
 }
 
-.checkmark:active {
-  background: linear-gradient(30deg, rgba(53,124,142,1) 0%, rgba(136,106,195,1) 100%);
+.completed li p {
+  text-decoration: line-through;
 }
