@@ -39,3 +39,7 @@ li {
 .checkmark:hover {
   background: linear-gradient(30deg, rgba(53,124,142,1) 0%, rgba(136,106,195,1) 100%);
 }
+
+.checkmark:active {
+  background: linear-gradient(30deg, rgba(53,124,142,1) 0%, rgba(136,106,195,1) 100%);
+}

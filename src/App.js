@@ -13,8 +13,8 @@ function App() {
       <div className="content-wrapper">
         <Header />
         <UserList />
-        <NoticeBar />
       </div>
+      {/* <NoticeBar /> */}
     </div>
   );
 }

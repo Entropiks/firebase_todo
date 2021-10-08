@@ -18,7 +18,13 @@ function UserList() {
       <div className="list-wrapper">
         <ul className="ul-wrapper">
          {userList.map(item => (
-           <UserItem text={item.text} key={item.id}/>
+           <UserItem 
+              item={item}
+              userList={userList}
+              setUserList={setUserList} 
+              text={item.text} 
+              key={item.id} 
+            />
          ))}
         </ul>
       </div>
