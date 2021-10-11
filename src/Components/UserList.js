@@ -6,6 +6,7 @@ function UserList() {
 
   const [inputText, setInputText] = useState("");
   const [userList, setUserList] = useState([]);
+  const [filterStatus, setFilterStatus] = useState("all");
 
   return (
     <div>
@@ -13,7 +14,8 @@ function UserList() {
         inputText={inputText}
         setInputText={setInputText}
         userList={userList}
-        setUserList={setUserList} 
+        setUserList={setUserList}
+        setFilterStatus={setFilterStatus} 
       />
       <div className="list-wrapper">
         <ul className="ul-wrapper">

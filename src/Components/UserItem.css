@@ -13,6 +13,7 @@
 .useritem-wrapper:hover {
   background-color: #000000af;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .useritem-wrapper-completed {
@@ -46,11 +47,12 @@ li {
   transition: 0.3s; */
 }
 .checkmark:hover {
-  background: linear-gradient(30deg, rgba(53,124,142,.5) 0%, rgba(136,106,195,.5) 50%);
+  background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  /* background: linear-gradient( 30deg, rgba(53,124,142,1) 0%, rgba(136,106,195,1) 100%); */
 }
 
 .completed {
-  background: linear-gradient(30deg, rgba(53,124,142,1) 0%, rgba(136,106,195,1) 100%);
+  background: linear-gradient ( hsl(192, 100%, 67%) to hsl(280, 87%, 65%) );
 }
 
 .completed li p {
