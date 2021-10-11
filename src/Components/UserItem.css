@@ -15,6 +15,9 @@
   transition: 0.3s;
 }
 
+.useritem-wrapper-completed {
+  background-color: #000000af;
+}
 .wrapper {
     flex-grow: 1;
     display: flex;

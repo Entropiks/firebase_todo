@@ -22,9 +22,9 @@ function UserItem({text, userList, setUserList, item }) {
 
   return (
     <div>
-      <div className={`useritem-wrapper ${item.completed ? "completed" : ''} `}> 
+      <div className={`useritem-wrapper ${item.completed ? "useritem-wrapper-completed" : ''} `}> 
         <div className="wrapper">
-          <div onClick={completedHandler} className="checkmark" >
+          <div onClick={completedHandler} className={`checkmark ${item.completed ? "completed" : ''} `}>
           <li className="user-item">
             <p>{text}</p>
           </li>

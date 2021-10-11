@@ -38,6 +38,7 @@
   color: white;
   box-sizing: border-box;
   background-color: transparent;
+  height: 100%;
   border: none;
   outline: 0;
   padding: 0;
@@ -65,4 +66,5 @@
   border: none;
   border-radius: 5px;
   border: 1px solid #ffffff38;
+  cursor: pointer;
 }
