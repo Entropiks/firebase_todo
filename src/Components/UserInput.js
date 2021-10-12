@@ -21,10 +21,6 @@ function UserInput({ inputText, setInputText, userList, setUserList }) {
     }
   }
 
-  const filterHandler = function(e) {
-    console.log(e);
-  }
-
   return (
     <div className="input-wrapper">
       <div className="input-field"> 

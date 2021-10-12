@@ -1,12 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import UserItem from './UserItem'
 import UserInput from './UserInput'
+import ListFooter from './ListFooter';
 
 function UserList() {
 
   const [inputText, setInputText] = useState("");
   const [userList, setUserList] = useState([]);
   const [filterStatus, setFilterStatus] = useState("all");
+  const [filteredItems, setFilteredItems] = useState([]);
+
+  // Everytime the userList changes, run this function which is being used to filter the list based on the filter clicked
+  useEffect(() => {
+    filterHandler();
+  }, [userList, filterStatus]);
+
+  const filterHandler = () => {
+    switch(filterStatus) {
+      case 'completed' : setFilteredItems(userList.filter(item => item.completed === true));
+      break;
+      case 'uncompleted' : setFilteredItems(userList.filter(item => item.completed === false));
+      break;
+      default: setFilteredItems(userList);
+    }
+  }
+
+  console.log(filteredItems);
 
   return (
     <div>
@@ -15,17 +34,19 @@ function UserList() {
         setInputText={setInputText}
         userList={userList}
         setUserList={setUserList}
-        setFilterStatus={setFilterStatus} 
       />
       <div className="list-wrapper">
+        <ListFooter 
+          setFilterStatus={setFilterStatus}
+        />
         <ul className="ul-wrapper">
-         {userList.map(item => (
+         {filteredItems.map(item => (
            <UserItem 
               item={item}
               userList={userList}
               setUserList={setUserList} 
               text={item.text} 
-              key={item.id} 
+              key={item.id}
             />
          ))}
         </ul>

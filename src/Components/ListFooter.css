@@ -1,0 +1,34 @@
+.list-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0000008c;
+  margin-top: 50px;
+  padding: 0px 20px;
+  color: #dcdcdc8c;
+}
+
+.list-footer p {
+  font-size: 14px;
+}
+
+
+.filter {
+  display: flex;
+}
+
+.filter button {
+  background-color: transparent;
+  border: none;
+  color: #dcdcdc8c;
+}
+
+
+.filter button:hover {
+  color: white;
+}
+
+.filter button.active {
+  color:#3a7bfd;
+}
+
+
