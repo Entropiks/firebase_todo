@@ -1,7 +1,7 @@
 import React from 'react'
 import './ListFooter.css'
 
-function ListFooter({ setFilterStatus }) {
+function ListFooter({ setFilterStatus, userList }) {
 
   const filterHandler = function(e) {
     setFilterStatus(e.target.value);
@@ -12,7 +12,8 @@ function ListFooter({ setFilterStatus }) {
 
   return (
     <div className="list-footer">
-      <p>3 Items Left</p>
+      {/* We need to pass the number of only completed items instead */}
+      <p>{userList.length} Items</p> 
       <div className="filter">
         <button value="all" onClick={filterHandler}>All</button>
         <button value="completed" onClick={filterHandler}>Completed</button>

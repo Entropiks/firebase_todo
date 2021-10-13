@@ -38,6 +38,8 @@ function UserList() {
       <div className="list-wrapper">
         <ListFooter 
           setFilterStatus={setFilterStatus}
+          filterStatus={filterStatus}
+          userList={userList}
         />
         <ul className="ul-wrapper">
          {filteredItems.map(item => (
