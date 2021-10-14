@@ -10,10 +10,30 @@ function UserList() {
   const [filterStatus, setFilterStatus] = useState("all");
   const [filteredItems, setFilteredItems] = useState([]);
 
+  useEffect(() => {
+    getLocalStorageUserList();
+  }, [])
+
   // Everytime the userList changes, run this function which is being used to filter the list based on the filter clicked
   useEffect(() => {
+    saveLocalStorageUserList();
     filterHandler();
   }, [userList, filterStatus]);
+
+  // Set up some local storage
+  const saveLocalStorageUserList = () => {
+    localStorage.setItem("userList", JSON.stringify(userList));
+  }
+
+  // Set up some local storage
+  const getLocalStorageUserList = () => {
+    if (localStorage.getItem("userList") === null ) {
+      localStorage.setItem("userList", JSON.stringify([]));
+    } else {
+      let storedUserList = JSON.parse(localStorage.getItem("userList"));
+      setUserList(storedUserList);
+    }
+  }
 
   const filterHandler = () => {
     switch(filterStatus) {

@@ -1,5 +1,7 @@
 import React from 'react'
 import './UserItem.css'
+import CheckIcon from '../assets/icon-check.svg';
+import DeleteIcon from '../assets/icon-cross.svg';
 
 function UserItem({text, userList, setUserList, item }) {
 
@@ -25,12 +27,14 @@ function UserItem({text, userList, setUserList, item }) {
       <div className={`useritem-wrapper ${item.completed ? "useritem-wrapper-completed" : ''} `}> 
         <div className="wrapper">
           <div onClick={completedHandler} className={`checkmark ${item.completed ? "completed" : ''} `}>
+          <span src={CheckIcon} />
           <li className="user-item">
             <p>{text}</p>
           </li>
           </div>
         </div>
-        <button onClick={deleteHandler} className="button-submit">Delete</button>
+        <img src={DeleteIcon} onClick={deleteHandler} className="button-delete"/>
+        {/* <button onClick={deleteHandler} className="button-submit">Delete</button> */}
       </div>
     </div>
   )
