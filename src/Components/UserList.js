@@ -60,6 +60,7 @@ function UserList() {
           setFilterStatus={setFilterStatus}
           filterStatus={filterStatus}
           userList={userList}
+          setUserList={setUserList}
         />
         <ul className="ul-wrapper">
          {filteredItems.map(item => (

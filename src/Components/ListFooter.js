@@ -1,13 +1,18 @@
 import React from 'react'
 import './ListFooter.css'
 
-function ListFooter({ setFilterStatus, userList }) {
+function ListFooter({ setFilterStatus, userList, setUserList }) {
 
   const filterHandler = function(e) {
     setFilterStatus(e.target.value);
 
     // lets set active on the clicked class for styling
     e.target.classList.toggle('active');
+  }
+
+  function clearList() {
+    console.log("clicked");
+    setUserList([]);
   }
 
   return (
@@ -19,7 +24,9 @@ function ListFooter({ setFilterStatus, userList }) {
         <button value="completed" onClick={filterHandler}>Completed</button>
         <button value="uncompleted" onClick={filterHandler}>Uncompleted</button>
       </div>
-      <p>Clear Completed</p>
+      <div onClick={clearList} className="clear-list">
+        <p>Clear Completed</p>
+      </div>
     </div>
   )
 }

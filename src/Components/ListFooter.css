@@ -29,11 +29,14 @@
   color: white;
 }
 
-.filter button.active {
-  color:#3a7bfd;
+.clear-list {
+  cursor: pointer;
+}
+.clear-list:hover {
+  color: white;
 }
 
-/* .menu-active {
-  display: flex;
+/* .filter button.active {
+  color:#3a7bfd;
 } */
 
