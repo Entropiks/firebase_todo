@@ -9,6 +9,7 @@ function UserList() {
   const [userList, setUserList] = useState([]);
   const [filterStatus, setFilterStatus] = useState("all");
   const [filteredItems, setFilteredItems] = useState([]);
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     getLocalStorageUserList();
@@ -44,8 +45,6 @@ function UserList() {
       default: setFilteredItems(userList);
     }
   }
-
-  console.log(filteredItems);
 
   return (
     <div>

@@ -25,7 +25,7 @@ function ListFooter({ setFilterStatus, userList, setUserList }) {
         <button value="uncompleted" onClick={filterHandler}>Uncompleted</button>
       </div>
       <div onClick={clearList} className="clear-list">
-        <p>Clear Completed</p>
+        <p>Clear</p>
       </div>
     </div>
   )
