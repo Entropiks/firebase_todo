@@ -63,11 +63,23 @@ li {
   background-image: linear-gradient(#000000af, #000000af), linear-gradient(30deg, rgba(87,221,255,1) 0%, rgba(136,106,195,1) 100%);
   background-origin: border-box;
   background-clip: content-box, border-box;
-  
+}
+
+.checkmark .completed-check:hover {
+  background-image: linear-gradient(#000000af, #000000af), linear-gradient(30deg, rgba(87,221,255,1) 0%, rgba(136,106,195,1) 100%);
 }
 
 .completed {
-  background: linear-gradient(30deg, rgba(87,221,255,1) 0%, rgba(136,106,195,1) 100%);
+  background-image: url('../assets/icon-check.svg'), linear-gradient(30deg, rgba(87,221,255,1) 0%, rgba(136,106,195,1) 100%);;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.completed-check {
+  /* background: linear-gradient(30deg, rgba(87,221,255,1) 0%, rgba(136,106,195,1) 100%); */
+  
+  /* padding-left: 8px;
+  padding-top: 1px; */
 }
 
 .completed li p {

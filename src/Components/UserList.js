@@ -36,6 +36,7 @@ function UserList() {
     }
   }
 
+  // Filter handler for All, Uncompleted or Completed
   const filterHandler = () => {
     switch(filterStatus) {
       case 'completed' : setFilteredItems(userList.filter(item => item.completed === true));
