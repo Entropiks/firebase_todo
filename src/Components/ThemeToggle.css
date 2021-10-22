@@ -77,6 +77,10 @@
     z-index: 3;
 }
 
+.active {
+  color: white !important;
+}
+
 .knobs
 {
     z-index: 2;

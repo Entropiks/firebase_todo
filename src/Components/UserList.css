@@ -4,11 +4,11 @@
 }
 
 .list-wrapper {
-  padding-bottom: 50px;
+  padding-bottom: 50px !important;
 }
 
 .list-wrapper ul {
-  padding-bottom: 0px;
+  /* padding-bottom: 0px; */
   margin: 0px;
 }
 
