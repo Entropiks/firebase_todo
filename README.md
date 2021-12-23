@@ -5,7 +5,7 @@ Complete with lo-fi vibes and dark / lite mode theme selector
 ## Where can I see this app?
 
 Check it out on netlify here!
-https://reacthooks-todo.netlify.app/
+https://prettytodo.netlify.app/
 
 ## Local build? Sure why not!
 
